@@ -298,15 +298,15 @@
                 font-size: 1.6em;
             }
 
-            .carousel {
+            .main-carousel {
                 margin: 0;
             }
 
-            .carousel-item {
+            .main-carousel .carousel-item {
                 height: 360px;
             }
 
-            .carousel-item img {
+            .main-carousel .carousel-item img {
                 display: inline-block;
                 height: 320px; 
                 
@@ -322,6 +322,33 @@
 
             .slide-three {
                 background-color: #692a7b;
+            }
+
+            .img-wrap {
+                position: relative;
+            }
+            .img-wrap .after {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-left: -25px;
+                margin-top: -25px;
+                width: 50px;
+                height: auto;
+                display: block;
+                color: #FFF;
+            }
+
+            .img-wrap .after:hover {
+                filter: grayscale(100%);
+            }
+
+            .presentation.third .p-img {
+                background-image: url("img/iStock-660953568-small.jpg");
+                background-repeat: no-repeat, repeat;
+                height: 10vw;
+                background-size: cover;
+                background-position: 50% 75%;
             }
             
         </style>
@@ -353,7 +380,7 @@
             </div>
         </div>
         <div class="slide-box">
-            <div class="carousel">
+            <div class="main-carousel">
                 <div class="carousel-inner">
                     <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
                     <div class="carousel-item slide-one">
@@ -418,7 +445,7 @@
             <div class="presentation">
                 <div class="img-wrap">
                     <img src="img/iStock-1169192820.jpg" alt="" />
-                    <img src="img/play-btn.png" alt="" class="play">
+                    <img class="after" src="img/play-icon-g.png">
                 </div>
                 <div class="details">
                     <div class="title">
@@ -432,6 +459,7 @@
             <div class="presentation second">
                 <div class="img-wrap">
                     <img src="img/iStock-946745152-small.jpg" alt="" />
+                    <img class="after" src="img/play-icon-o.png">
                 </div>
                 <div class="details">
                     <div class="title">
@@ -441,9 +469,10 @@
                     <button class="btn second">Sunumu izle</button>
                 </div>
             </div>
-            <div class="presentation">
+            <div class="presentation third">
                 <div class="img-wrap">
-                    <img src="img/iStock-660953568-small.jpg" alt="" />
+                    <div class="p-img" ></div>
+                    <img class="after" src="img/play-icon-b.png">
                 </div>
                 <div class="details">
                     <div class="title">
