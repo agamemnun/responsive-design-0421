@@ -1,3 +1,8 @@
+:root {
+  --logo-margin: 8em;
+  --main-carousel-margin: 8rem;
+}
+
 @font-face {
   font-family: 'Open Sans Regular';
   src: url('../fonts/OpenSans-Regular.ttf');
@@ -196,9 +201,11 @@
   border-color: #b580c1;
 }
 
-.logo-wrap {
-  padding: 1em 1em 1em 10em;
-  width: 40%;
+.logo {
+  width: 180px;
+  display: block;
+  margin-left: var(--logo-margin);
+  padding: 1em 0em 1em 0em;
 }
 
 .logo-wrap svg {
@@ -212,12 +219,12 @@
 .upper-menu,
 .lower-menu {
   position: absolute;
-  right: 8em;
-  bottom: 3em;
+  right: var(--logo-margin);
+  bottom: 4em;
 }
 
 .lower-menu {
-  bottom: 0.5em;
+  bottom: 1.2em;
 }
 
 .upper-menu ul,
@@ -272,13 +279,13 @@
 .slide-def-wrap {
   color: #fff;
   display: inline-block;
-  width: 50%;
+  width: 45%;
   font-size: 1rem;
   min-height: 300px;
   top: 0;
   vertical-align: top;
-  padding: 4em 6em 5em 6em;
-  margin: 0 0 0 4em;
+  padding: 4em 6em 5em 0;
+  /*margin: 0 0 0 4em;*/
 }
 
 .slide-def-wrap .btn {
@@ -298,13 +305,16 @@
 }
 
 .main-carousel .carousel-item {
-  height: 360px;
+  height: 400px;
   box-shadow: inset 0px -5px 2px -4px rgb(0 0 0 / 30%);
+  padding: 0 var(--main-carousel-margin);
 }
 
 .main-carousel .carousel-item img {
   display: inline-block;
-  height: 320px;
+  /*width: 45%;*/
+  height: 100%;
+  object-fit: contain;
 }
 
 .main-carousel .slide-one {
