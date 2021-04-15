@@ -216,27 +216,27 @@
   position: relative;
 }
 
-.upper-menu,
-.lower-menu {
+#upper-menu,
+#lower-menu {
   position: absolute;
   right: var(--logo-margin);
   bottom: 4em;
 }
 
-.lower-menu {
+#lower-menu {
   bottom: 1.2em;
 }
 
-.upper-menu ul,
-.lower-menu ul {
+#upper-menu ul,
+#lower-menu ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
 }
 
-.upper-menu li,
-.lower-menu li {
+#upper-menu li,
+#lower-menu li {
   display: inline;
   border-right: 1px solid #bbb;
   padding-right: 0.5em;
@@ -244,12 +244,12 @@
   float: left;
 }
 
-.lower-menu li {
+#lower-menu li {
   border-right: none;
 }
 
-.upper-menu li a,
-.lower-menu li a {
+#upper-menu li a,
+#lower-menu li a {
   display: block;
   color: #7a7a7a;
   text-align: center;
@@ -258,7 +258,7 @@
   font-size: 0.6em;
 }
 
-.lower-menu li a {
+#lower-menu li a {
   display: block;
   color: #4e4e4e;
   text-align: center;
@@ -268,11 +268,11 @@
   font-weight: 600;
 }
 
-.upper-menu li a:hover {
+#upper-menu li a:hover {
   color: #111;
 }
 
-.upper-menu li:last-child {
+#upper-menu li:last-child {
   border-right: none;
 }
 
