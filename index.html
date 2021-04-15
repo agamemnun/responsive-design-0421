@@ -1,357 +1,8 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="css/carousel.css"  />
-        <style>
-            @font-face {
-                font-family: "Open Sans Regular";
-                src: url("fonts/OpenSans-Regular.ttf");
-            }
-            @font-face {
-                font-family: "DIN Alternate Bold";
-                src: url("fonts/DIN Alternate Bold.ttf");
-            }
-            @font-face {
-                font-family: "Rubik-Light";
-                src: url("fonts/Rubik-Light.ttf");
-            }
-            @font-face {
-                font-family: "Rubik-Medium";
-                src: url("fonts/Rubik-Medium.ttf");
-            }
-            @font-face {
-                font-family: "Rubik-Regular";
-                src: url("fonts/Rubik-Regular.ttf");
-            }
-            * {
-                font-family: "Open Sans Regular";
-                -webkit-box-sizing: border-box;
-                -moz-box-sizing: border-box;
-                box-sizing: border-box;
-            }
-            .header {
-                background-color: #d6f2f3;
-                min-height: 100px;
-            }
-
-            .slide-box {
-                /*background-color: #33c0c4;*/
-                min-height: 300px;
-                font-size: 0;
-            }
-
-            .presentations {
-                min-height: 11vw;
-                display: flex;
-                border-bottom: 1px solid #dfe2f0;
-            }
-
-            .presentation {
-                flex: 1;
-            }
-
-            .presentation.second {
-                background-color: #f8f8f8;
-            }
-
-            .presentation img {
-                vertical-align: top;
-                width: 100%;
-                object-fit: scale-down;
-            }
-
-            .presentation .img-wrap {
-                float: left;
-                width: 60%;
-                height: 10vw;
-                padding: 0.5em 0 0.5em 0.5em;
-                overflow-y: hidden;
-            }
-
-            .presentation .details {
-                width: 40%;
-                float: right;
-                font-size: 1.3vw;;
-                text-align: center;
-                padding: 1.2em;
-            }
-
-            .details .title {
-                text-align: left;
-                padding-left: 1em;
-            }
-
-            .details .btn {
-                width: 9vw;
-                float: right;
-                font-size: 0.9vw;
-                border-radius: 1em;
-                border: solid;
-                color: #fff;
-                margin-top: 0.5em;
-            }
-
-            .btn:focus {
-                outline: 0;
-            }
-
-            .btn.first {
-                background-color: #a0ce67;
-                border-color: #a0ce67;
-            }
-
-            .btn.second {
-                background-color: #f58220;
-                border-color: #f58220;
-            }
-
-            .btn.third {
-                background-color: #00afdb;
-                border-color: #00afdb;
-            }
-
-            .text-wrap {
-                display: inline-block;
-                width: 60px;
-                height: 120px;
-                line-height: 120px;
-                text-align: center;
-            }
-
-            .presentation span {
-                line-height: 100%;
-                vertical-align: middle;
-            }
-
-            .products-wrap {
-                margin-bottom: 10vw;
-            }
-
-            .products-wrap .title {
-                text-align: center;
-                font-weight: 500;
-                font-size: 1.2em;
-            }
-
-            .products {
-                display: flex;
-                margin: 0 16vw;
-            }
-
-            .product {
-                flex: 1;
-                margin: 1vw;
-                background-color: #f8f8f8;
-                color: #909090;
-            }
-
-            .product .subject {
-                color: #222222;
-                height: 15%;
-                margin-bottom: 0.6vw;
-            }
-
-            .product .img-wrap {
-                height: 10vw;
-                overflow-y: hidden;
-            }
-
-            .product img {
-                vertical-align: top;
-                width: 100%;
-                object-fit: scale-down;
-            }
-
-            .product .summary{
-                font-size: 0.7em;
-            }
-
-            .product .content {
-                padding: 0.8em;
-            }
-
-            .subtitle {
-                padding: 0.5rem 0 0.8rem 1rem;
-                font-size: 0.6em;
-                border-top: 1px solid #dedede;
-                width: 50%;
-                color: #acacac;
-                float: left;
-            }
-
-            .product .btn {
-                width: 7vw;
-                float: right;
-                font-size: 0.7em;
-                border-radius: 1em;
-                border: solid;
-                color: #fff;
-                margin-right: 1vw;
-                margin-top: -1vw;
-                right: 0px;
-            }
-            
-            .product .btn.first {
-                background-color: #33c0c4;
-                border-color: #33c0c4;
-            }
-
-            .product .btn.second {
-                background-color: #b580c1;
-                border-color: #b580c1;
-            }
-
-            .logo-wrap {
-                padding: 1em 1em 1em 10em;
-                width: 40%;
-            }
-
-            .logo-wrap svg{
-                height: 60px;
-            }
-
-            .nav-bar {
-                position: relative;
-            }
-
-            .upper-menu, .lower-menu {
-                position: absolute;
-                right: 8em;
-                bottom: 3em;
-            }
-
-            .lower-menu {
-                bottom: 0.5em;
-            }
-
-
-            .upper-menu ul, .lower-menu ul {
-                list-style-type: none;
-                margin: 0;
-                padding: 0;
-                overflow: hidden;
-            }
-
-            .upper-menu li, .lower-menu li {
-                display: inline;
-                border-right: 1px solid #bbb;
-                padding-right: 0.5em;
-                padding-left: 0.5em;
-                float: left;
-            }
-
-            .lower-menu li {
-                border-right: none;
-            }
-
-            .upper-menu li a, .lower-menu li a {
-                display: block;
-                color: #7a7a7a;
-                text-align: center;
-                padding: 4px 2px;
-                text-decoration: none;
-                font-size: 0.6em;
-            }
-
-            .lower-menu li a {
-                display: block;
-                color: #4e4e4e;
-                text-align: center;
-                padding: 4px 2px;
-                text-decoration: none;
-                font-size: 0.9em;
-                font-weight: 600;
-            }
-
-            .upper-menu li a:hover {
-                color: #111;
-            }
-
-            .upper-menu li:last-child {
-                border-right: none;
-            }
-
-            .slide-def-wrap {
-                color: #fff;
-                display: inline-block;
-                width: 50%;
-                font-size: 1rem;
-                min-height: 300px;
-                top: 0;
-                vertical-align:top;
-                padding: 4em 6em 5em 6em;
-                margin: 0 0 0 4em;
-            }
-
-            .slide-def-wrap .btn {
-                width: 9vw;
-                font-size: 0.9vw;
-                border-radius: 1em;
-                border: 1px solid;
-                color: #fff;
-                margin-top: 1em;
-                background-color: transparent;
-                padding: 0.3em 0;
-            }
-
-            .slide-def-wrap .title {
-                font-weight: 800;
-                font-size: 1.6em;
-            }
-
-            .main-carousel {
-                margin: 0;
-            }
-
-            .main-carousel .carousel-item {
-                height: 360px;
-            }
-
-            .main-carousel .carousel-item img {
-                display: inline-block;
-                height: 320px; 
-                
-            }
-
-            .main-carousel .slide-one {
-                background-color: #33c0c4;
-            }
-
-            .main-carousel .slide-two {
-                background-color: #f7584a;
-            }
-
-            .main-carousel .slide-three {
-                background-color: #692a7b;
-            }
-
-            .img-wrap {
-                position: relative;
-            }
-            .img-wrap .after {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                margin-left: -25px;
-                margin-top: -25px;
-                width: 50px;
-                height: auto;
-                display: block;
-                color: #FFF;
-            }
-
-            .img-wrap .after:hover {
-                filter: grayscale(100%);
-            }
-
-            .presentation.third .p-img {
-                background-image: url("img/iStock-660953568-small.jpg");
-                background-repeat: no-repeat, repeat;
-                height: 10vw;
-                background-size: cover;
-                background-position: 50% 75%;
-            }
-            
-        </style>
+        <link rel="stylesheet" type="text/css" href="css/main.css"  />
+        <link rel="stylesheet" type="text/css" href="css/media.css"  />
     </head>
     <body>
         <div class="header">
@@ -483,13 +134,12 @@
                 </div>
             </div>
         </div>
-        <div class="products-wrap">
-            <div class="title"><p>Yeni Nesil CRM</p></div>
-            <div class="products">
-                <div class="product">
-                    <div class="img-wrap">
-                        <img src="img/iStock-680359574.jpg" style="transform: scaleX(-1);" alt="">
-                    </div>
+        <div class="products-wrap product-carousel">
+            <!--<div class="title"><p>Yeni Nesil CRM</p></div>-->
+            <div class="products carousel-inner">
+                <input class="carousel-open" type="radio" id="p-carousel-1" name="p-carousel" aria-hidden="true" hidden="" checked="checked">
+                <div class="product carousel-item">
+                    <img src="img/iStock-680359574.jpg" style="transform: scaleX(-1);" alt="">
                     <div class="content">
                         <div class="subject">Tekilleşmiş konsolide müşteri veri tabanı</div>
                         <p class="summary">Müşteriye dair tüm veriyi (ERP, Mağazacılık, e-Ticaret, Servis uygulamaları, diğer CRM’ler, e-Tablo, web sitesi formları vb.) Next4biz’de bütünleştirin.</p>
@@ -499,10 +149,9 @@
                         <button class="btn first">Buton</button>
                     </div>
                 </div>
-                <div class="product">
-                    <div class="img-wrap">
-                        <img src="img/yapay-zeka.jpg" alt="">
-                    </div>
+                <input class="carousel-open" type="radio" id="p-carousel-2" name="p-carousel" aria-hidden="true" hidden="">
+                <div class="product carousel-item">
+                    <img src="img/yapay-zeka.jpg" alt="">
                     <div class="content">
                         <div class="subject">Dijital davranış ve izleri analiz edin!</div>
                         <p class="summary">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
@@ -512,10 +161,9 @@
                         <button class="btn second">Buton</button>
                     </div>
                 </div>
-                <div class="product">
-                    <div class="img-wrap">
-                        <img src="img/iStock-1005771302-small.jpg" alt="">
-                    </div>
+                <input class="carousel-open" type="radio" id="p-carousel-3" name="p-carousel" aria-hidden="true" hidden="">
+                <div class="product carousel-item">
+                    <img src="img/iStock-1005771302-small.jpg" alt="">
                     <div class="content">
                         <div class="subject">Dijital Kampanya Yönetimi</div>
                         <p class="summary">Müşteriye dair tüm veriyi (ERP, Mağazacılık, e-Ticaret, Servis uygulamaları, diğer CRM’ler, e-Tablo, web sitesi formları vb.) Next4biz’de bütünleştirin.</p>
@@ -525,6 +173,17 @@
                         <button class="btn second">Buton</button>
                     </div>
                 </div>
+                <ol class="carousel-indicators">
+                    <li>
+                        <label for="p-carousel-1" class="carousel-bullet">•</label>
+                    </li>
+                    <li>
+                        <label for="p-carousel-2" class="carousel-bullet">•</label>
+                    </li>
+                    <li>
+                        <label for="p-carousel-3" class="carousel-bullet">•</label>
+                    </li>
+                </ol>
             </div>
         </div>
     </body>
