@@ -1,16 +1,16 @@
 @media screen and (min-width: 1601px) {
   :root {
-    --logo-margin: 4rem;
-    --main-carousel-margin: 4rem;
-    --menu-left-mg: 48rem;
+    --logo-margin: 12rem;
+    --main-carousel-margin: 12rem;
+    --menu-left-mg: 36rem;
   }
 }
 
 @media screen and (max-width: 1600px) {
   :root {
-    --logo-margin: 4rem;
-    --main-carousel-margin: 4rem;
-    --menu-left-mg: 20rem;
+    --logo-margin: 10rem;
+    --main-carousel-margin: 10rem;
+    --menu-left-mg: 10rem;
   }
 }
 
@@ -26,9 +26,9 @@
 
 @media screen and (max-width: 1200px) {
   :root {
-    --logo-margin: 4rem;
-    --main-carousel-margin: 4rem;
-    --menu-left-mg: 8rem;
+    --logo-margin: 8rem;
+    --main-carousel-margin: 8rem;
+    --menu-left-mg: 1rem;
   }
   .details .title {
     font-size: 1.1rem;
@@ -38,6 +38,13 @@
 @media screen and (min-width: 901px) {
   .details .title {
     font-size: 1rem;
+  }
+  .slide-def-wrap {
+    font-size: 0.9rem;
+  }
+  .slide-def-wrap .title {
+    font-weight: 800;
+    font-size: 1.3rem;
   }
 }
 
@@ -53,14 +60,8 @@
     display: block;
   }
 
-  .presentation {
-  }
-
   .presentation img {
     object-fit: cover;
-  }
-
-  .presentation .details {
   }
 
   .details .title {
@@ -72,6 +73,14 @@
   .details .btn {
     width: 100%;
     font-size: 1rem;
+  }
+
+  .slide-def-wrap {
+    font-size: 0.8rem;
+  }
+  .slide-def-wrap .title {
+    font-weight: 800;
+    font-size: 1.1rem;
   }
 }
 
@@ -92,6 +101,8 @@
     --logo-margin: 2rem;
     --main-carousel-margin: 0;
     --presentation-height: 180px;
+    --slide-block-width: 90%;
+    --slide-height: 500px;
   }
   /* products */
   .products {
@@ -162,14 +173,23 @@
     text-align: center;
   }
 
+  .slide-def-wrap .title {
+    font-size: 2.6rem;
+  }
+
   .slide-def .summary {
     display: none;
+  }
+
+  .slide-def-wrap .btn {
+    font-size: 0.9rem;
+    margin-top: 2em;
+    padding: 0.5em 0;
   }
   /* main slider */
 
   .product-carousel {
     position: relative;
-    /*box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);*/
   }
 
   .product-carousel .carousel-inner {
@@ -188,15 +208,7 @@
     position: absolute;
     opacity: 0;
     display: none;
-    /*-webkit-transition: opacity 0.6s ease-out;
-    transition: opacity 0.6s ease-out;*/
   }
-
-  /*.product-carousel .carousel-item img {
-    display: block;
-    height: auto;
-    max-width: 100%;
-  }*/
 
   .product-carousel .carousel-indicators {
     list-style: none;
@@ -262,13 +274,4 @@
   }
 
   /* menu */
-
-  /* slides */
-  /*.details .btn {
-    width: 8rem;
-    font-size: 1rem;
-    border-radius: 1em;
-    margin-top: 1rem;
-  }*/
-  /* slides */
 }

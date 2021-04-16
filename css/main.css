@@ -3,6 +3,8 @@
   --main-carousel-margin: 8rem;
   --menu-left-mg: 12rem;
   --presentation-height: 160px;
+  --slide-height: 400px;
+  --slide-block-width: 45%;
 }
 
 @font-face {
@@ -284,24 +286,24 @@
 .slide-def-wrap {
   color: #fff;
   display: inline-block;
-  width: 45%;
+  width: var(--slide-block-width);
   font-size: 1rem;
-  min-height: 300px;
+  min-height: var(--slide-height);
   top: 0;
   vertical-align: top;
-  padding: 4em 6em 5em 0;
-  /*margin: 0 0 0 4em;*/
+  padding: calc(var(--slide-height) / 4) 0;
+  padding-right: 4em;
 }
 
 .slide-def-wrap .btn {
-  width: 9vw;
-  font-size: 0.9vw;
+  width: 40%;
+  font-size: 0.7rem;
   border-radius: 1em;
   border: 1px solid;
   color: #fff;
   margin-top: 1em;
   background-color: transparent;
-  padding: 0.3em 0;
+  padding: 0.4em 0;
 }
 
 .slide-def-wrap .title {
@@ -310,15 +312,15 @@
 }
 
 .main-carousel .carousel-item {
-  height: 400px;
+  height: var(--slide-height);
   box-shadow: inset 0px -5px 2px -4px rgb(0 0 0 / 30%);
   padding: 0 var(--main-carousel-margin);
 }
 
 .main-carousel .carousel-item img {
   display: inline-block;
-  /*width: 45%;*/
-  height: 100%;
+  width: var(--slide-block-width);
+  height: var(--slide-height);
   object-fit: contain;
 }
 
