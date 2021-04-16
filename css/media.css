@@ -3,8 +3,20 @@
 
 @media screen and (max-width: 1200px) {
   :root {
-    --logo-margin: 4em;
+    --logo-margin: 4rem;
     --main-carousel-margin: 4rem;
+    --menu-left-mg: 8rem;
+  }
+}
+
+@media screen and (min-width: 901px) {
+}
+
+@media screen and (max-width: 900px) {
+  :root {
+    --logo-margin: 4rem;
+    --main-carousel-margin: 4rem;
+    --menu-left-mg: 0rem;
   }
 }
 
@@ -12,11 +24,14 @@
   .product-carousel .carousel-indicators {
     display: none;
   }
+  .header .menu {
+    display: block;
+  }
 }
 
 @media screen and (max-width: 768px) {
   :root {
-    --logo-margin: 2em;
+    --logo-margin: 2rem;
     --main-carousel-margin: 0;
   }
   /* products */
@@ -155,4 +170,32 @@
     .carousel-bullet {
     color: #5f6db3;
   }
+
+  /* menu */
+  .header .upper {
+    font-size: 0.8em;
+    border-bottom: 1px solid rgba(122, 122, 122, 0.3);
+  }
+  .upper li a {
+    padding: 10px 0;
+    border-right: none;
+    font-weight: 600;
+  }
+
+  .lower li a {
+    padding: 10px 0;
+  }
+
+  .header li a {
+    text-align: center;
+    border-bottom: 1px solid rgba(122, 122, 122, 0.3);
+  }
+
+  .header .menu {
+    display: none;
+    margin: 0;
+    background-color: #fff;
+  }
+
+  /* menu */
 }
