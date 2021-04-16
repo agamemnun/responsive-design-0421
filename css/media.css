@@ -15,6 +15,13 @@
 }
 
 @media screen and (min-width: 1201px) {
+  .details .title {
+    font-size: 1em;
+    padding-left: 1em;
+  }
+  .details .btn {
+    width: 80%;
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -23,9 +30,15 @@
     --main-carousel-margin: 4rem;
     --menu-left-mg: 8rem;
   }
+  .details .title {
+    font-size: 1.1rem;
+  }
 }
 
 @media screen and (min-width: 901px) {
+  .details .title {
+    font-size: 1rem;
+  }
 }
 
 @media screen and (max-width: 900px) {
@@ -33,6 +46,32 @@
     --logo-margin: 4rem;
     --main-carousel-margin: 4rem;
     --menu-left-mg: 0rem;
+    --presentation-height: 240px;
+  }
+
+  .presentations {
+    display: block;
+  }
+
+  .presentation {
+  }
+
+  .presentation img {
+    object-fit: cover;
+  }
+
+  .presentation .details {
+  }
+
+  .details .title {
+    text-align: left;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+  }
+
+  .details .btn {
+    width: 100%;
+    font-size: 1rem;
   }
 }
 
@@ -42,6 +81,9 @@
   }
   .header .menu {
     display: block;
+  }
+  .details .title {
+    font-size: 1rem;
   }
 }
 
@@ -214,4 +256,13 @@
   }
 
   /* menu */
+
+  /* slides */
+  /*.details .btn {
+    width: 8rem;
+    font-size: 1rem;
+    border-radius: 1em;
+    margin-top: 1rem;
+  }*/
+  /* slides */
 }

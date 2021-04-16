@@ -2,6 +2,7 @@
   --logo-margin: 8rem;
   --main-carousel-margin: 8rem;
   --menu-left-mg: 12rem;
+  --presentation-height: 160px;
 }
 
 @font-face {
@@ -43,13 +44,14 @@
 }
 
 .presentations {
-  min-height: 11vw;
+  min-height: var(--presentation-height);
   display: flex;
   border-bottom: 1px solid #dfe2f0;
 }
 
 .presentation {
   flex: 1;
+  height: var(--presentation-height);
 }
 
 .presentation.second {
@@ -59,37 +61,40 @@
 .presentation img {
   vertical-align: top;
   width: 100%;
-  object-fit: scale-down;
+  height: calc(var(--presentation-height) - 20px);
+  object-fit: cover;
 }
 
 .presentation .img-wrap {
   float: left;
   width: 60%;
-  height: 10vw;
   padding: 0.5em 0 0.5em 0.5em;
   overflow-y: hidden;
 }
 
 .presentation .details {
   width: 40%;
+  height: var(--presentation-height);
   float: right;
-  font-size: 1.3vw;
+  font-size: 1rem;
+  line-height: 1.4rem;
   text-align: center;
-  padding: 1.2em;
+  padding: calc(var(--presentation-height) / 4)
+    calc(var(--presentation-height) / 8);
 }
 
 .details .title {
   text-align: left;
-  padding-left: 1em;
+  font-size: 0.8em;
 }
 
 .details .btn {
-  width: 9vw;
-  float: right;
-  font-size: 0.9vw;
+  width: 100%;
+  font-size: 0.6rem;
   border-radius: 1em;
   border: solid;
   color: #fff;
+  padding: 0;
   margin-top: 0.5em;
 }
 
