@@ -132,6 +132,11 @@
     margin: 4% 0 5% 0;
   }
 
+  .details .title {
+    font-size: 100%;
+    line-height: 1.2rem;
+  }
+
   /* products */
 
   /* main slider */
