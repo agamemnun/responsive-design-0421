@@ -208,6 +208,8 @@
     position: absolute;
     opacity: 0;
     display: none;
+    -webkit-transition: opacity 0.6s ease-out;
+    transition: opacity 0.6s ease-out;
   }
 
   .product-carousel .carousel-indicators {
